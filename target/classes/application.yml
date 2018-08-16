@@ -1,0 +1,17 @@
+server:
+  port : 8700
+  
+spring:
+  application:
+    name: toDoConfigServer
+
+  cloud:
+   config:
+      server:
+        git:
+          uri: https://github.com/YugandharaP/ToDoCommonConfigurations.git
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8300/eureka}
+  
